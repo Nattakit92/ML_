@@ -29,8 +29,13 @@ while True:
         # Unpack the 100 floats from the received data
         scores = struct.unpack('100f', data)
 
+        reset = all(score == 0 for score in scores)
+        
+        if reset:
+            print("helloworld")
+
         # Prepare a response: a random array of 100 floats in the range 0-360
-        response_array = [RL() for _ in range(100)]
+        response_array = [RL(scores) for _ in range(100)]
         response_bytes = struct.pack('100f', *response_array)
 
         # Send the response back to the client

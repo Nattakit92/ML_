@@ -397,6 +397,7 @@
 "Assets/code/CheckpointSingle.cs"
 "Assets/code/movement.cs"
 "Assets/code/python.cs"
+"Assets/code/reset.cs"
 "Assets/Joystick Pack/Examples/JoystickPlayerExample.cs"
 "Assets/Joystick Pack/Examples/JoystickSetterExample.cs"
 "Assets/Joystick Pack/Scripts/Base/Joystick.cs"
