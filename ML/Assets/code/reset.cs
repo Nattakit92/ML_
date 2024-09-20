@@ -5,29 +5,31 @@ using UnityEngine;
 public class reset : MonoBehaviour
 {
     public Transform cars;
-    private float time = 0;
-    void Start()
-    {
-        
-    }
+    private float time;
 
     // Update is called once per frame
     void Update()
     {
+        int i = 600;
         time += Time.deltaTime;
-        if (time > 6) 
+        if (time > 5) 
         {
-            time = 0;
             foreach (Transform cars_10 in cars)
             {
                 foreach (Transform car in cars_10)
                 {
-                    car.GetComponent<movement>().angle = 0;
-                    car.GetComponent<movement>().car.position = new Vector3(-7,-1,0);
-                    car.GetComponent<Checkpoint>().score = 0;
+                    if (car.GetComponent<Checkpoint>().total_score < -50) 
+                    {
+                        car.GetComponent<movement>().car.position = new Vector3(-7, -1, 0);
+                        car.GetComponent<movement>().angle = 0;
+                        car.GetComponent<Checkpoint>().count = 0;
+                        car.GetComponent<Checkpoint>().score = 0;
+                        car.GetComponent<Checkpoint>().total_score = 0;
+                        cars.GetComponent<Cars_score>().step[i] = 0;
+                        i++;
+                    }
                 }
-            }
-            cars.GetComponent<Cars_score>().scores = new float[100];
+            }   
         }
     }
 }

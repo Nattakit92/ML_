@@ -7,7 +7,7 @@ using UnityEngine;
 public class Cars_score : MonoBehaviour
 {
     public Transform cars;
-    public float[] scores = new float[100];
+    public int[] step = new int[700];
     public float[] rotation = new float[100];
     private int count = 0;
     private void Update()
@@ -17,7 +17,12 @@ public class Cars_score : MonoBehaviour
             foreach(Transform car in cars_10)
             {
                 car.GetComponent<movement>().angle = rotation[count];
-                scores[count] = car.GetComponent<Checkpoint>().score;
+                step[count] = (int)car.GetComponent<Checkpoint>().score;
+                step[count + 100] = (int)car.GetComponent<movement>().car.velocity.x;
+                step[count + 200] = (int)car.GetComponent<movement>().car.velocity.y;
+                step[count + 300] = (int)car.GetComponent<movement>().car.position.x;
+                step[count + 400] = (int)car.GetComponent<movement>().car.position.y;
+                step[count + 500] = (int)car.GetComponent<Checkpoint>().count;
                 count++;
             }
         }

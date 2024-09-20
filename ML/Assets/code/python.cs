@@ -20,7 +20,11 @@ public class python : MonoBehaviour
 
     void Update()
     {
-        SendDataToPython(cars_score.scores);
+        SendDataToPython(cars_score.step);
+        for(int i = 600;i < 700; i++)
+        {
+            cars_score.step[i] = 1;
+        }
     }
 
     void ConnectToPythonServer()
@@ -36,14 +40,14 @@ public class python : MonoBehaviour
         }
     }
 
-    void SendDataToPython(float[] messageArray)
+    void SendDataToPython(int[] messageArray)
     {
         if (client == null) return;
 
         try
         {
             // Convert the float array to byte array
-            byte[] data = new byte[messageArray.Length * sizeof(float)];
+            byte[] data = new byte[messageArray.Length * sizeof(int)];
             Buffer.BlockCopy(messageArray, 0, data, 0, data.Length);
 
             // Send data to the server

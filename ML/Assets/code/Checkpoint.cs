@@ -11,8 +11,8 @@ public class Checkpoint : MonoBehaviour
     public CheckpointSingle[] checkpoints;
     public TextMeshProUGUI score_text;
     public float score = 0;
-    public float reward = 0;
-    private int count = 0;
+    public float total_score = 0;
+    public int count = 0;
     void Start()
     {
         score_text.text = "Score: 1";
@@ -25,24 +25,29 @@ public class Checkpoint : MonoBehaviour
     {
         if (count.ToString() == checkpoint.transform.name){
             count++;
-            score += 5;
+            score += 100;
             if (count > 11)
             {
                 count = 0;
                 Debug.Log("Done");
             }
+            total_score = count*5;
         }
     }
     void Update()
     {
-        reward = checkpoints[count].transform.position.sqrMagnitude - car.position.sqrMagnitude;
-        if (reward < 0) 
+        Vector2 checkpoint_pos = checkpoints[count].transform.position;
+        Vector2 car_pos = car.position;
+        Vector2 car_vel = car.velocity;
+        Vector2 pos_diff = checkpoint_pos - car_pos;
+
+        score = Vector2.Dot(car_vel.normalized, pos_diff.normalized) * 10;
+        total_score += score;
+        if(total_score < -50)
         {
-            reward = -reward;
+            score = -1000;
         }
-        reward /= 500;
-        reward = 0.03f - reward;
-        score += reward;
+
         /*score_text.text = "Score: " + Mathf.Round(score*100)/100;*/
     }
 }

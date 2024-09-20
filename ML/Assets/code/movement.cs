@@ -12,9 +12,9 @@ public class movement : MonoBehaviour
     void Update()
     {
         car.AddForce(new Vector2(Mathf.Sin(angle / 180 * Mathf.PI) * player_speed, Mathf.Cos(angle / 180 * Mathf.PI) * player_speed));
-        //car.AddForce(new Vector2(joystick.Direction.x * player_speed, joystick.Direction.y * player_speed));
-        float rotation = Mathf.Atan(joystick.Direction.y / joystick.Direction.x);
         car_transform.eulerAngles = new Vector3(0, 0, -angle);
+        //car.AddForce(new Vector2(joystick.Direction.x * player_speed, joystick.Direction.y * player_speed));
+        //float rotation = Mathf.Atan(joystick.Direction.y / joystick.Direction.x);
         /*if (joystick.Direction.x + joystick.Direction.y != 0)
         {
             car_transform.eulerAngles = new Vector3(0, 0, (float)(rotation * 180 / 3.14) + 90);

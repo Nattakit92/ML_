@@ -186,7 +186,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &6870038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -392,7 +393,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &11769625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -598,7 +600,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &24398637
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -804,7 +807,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &25252198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1010,7 +1014,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &44786655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1216,7 +1221,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &46092619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1422,7 +1428,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &47927473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1774,7 +1781,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &77732495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1980,7 +1988,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &89952409
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2186,7 +2195,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &96383140
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2392,7 +2402,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &141014028
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2639,7 +2650,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &156477171
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2845,7 +2857,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &179698584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3051,7 +3064,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &210812918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3257,7 +3271,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &217025599
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3609,7 +3624,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &239071823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3815,7 +3831,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &241156797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4235,7 +4252,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &327776496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4441,7 +4459,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &363396001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4632,7 +4651,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &366082943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5227,7 +5247,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &482427048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5433,7 +5454,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &491975902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5682,7 +5704,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &502844041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5980,7 +6003,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &528190976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6186,7 +6210,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &546663127
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6392,7 +6417,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &615221676
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6598,7 +6624,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &616017106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6804,7 +6831,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &616738909
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7010,7 +7038,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &618808152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7251,7 +7280,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &651339279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7457,7 +7487,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &653267614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7850,7 +7881,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &760433664
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8056,7 +8088,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &769245689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8262,7 +8295,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &777340366
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8609,7 +8643,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!1 &780196843
 GameObject:
   m_ObjectHideFlags: 0
@@ -8674,7 +8709,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &780196846
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8880,7 +8916,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &780703096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9086,7 +9123,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &791699844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9292,7 +9330,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &794269000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9498,7 +9537,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &810539373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9704,7 +9744,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &819560201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9910,7 +9951,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &820928770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10116,7 +10158,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &845295910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10322,7 +10365,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &846436437
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10528,7 +10572,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &888289705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10880,7 +10925,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &933311287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11086,7 +11132,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &953407382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11292,7 +11339,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &959022750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11644,7 +11692,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &992868487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11850,7 +11899,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &994490556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12186,7 +12236,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1083676085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12392,7 +12443,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1086959318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12598,7 +12650,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1106080186
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12922,7 +12975,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1128968191
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13143,7 +13197,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1136980065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13349,7 +13404,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1149185827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13555,7 +13611,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1188703455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13761,7 +13818,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1202523590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13967,7 +14025,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1211371666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14173,7 +14232,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1221301427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14379,7 +14439,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1224848402
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14719,7 +14780,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1236426170
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14925,7 +14987,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1238567904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15122,107 +15185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cars: {fileID: 1245527028}
-  scores:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  step: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   rotation:
   - 0
   - 0
@@ -15388,7 +15351,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1264555201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15594,7 +15558,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1301324112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15800,7 +15765,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1319426079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16047,7 +16013,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1329982665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16253,7 +16220,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1348436415
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16589,7 +16557,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1405000132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16795,7 +16764,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1410199273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17318,7 +17288,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1510147609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17524,7 +17495,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1532885109
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17730,7 +17702,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1560043684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17936,7 +17909,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1563271691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18183,7 +18157,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1600358305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18519,7 +18494,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1651806965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18725,7 +18701,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1657546847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18972,7 +18949,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1693086217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19178,7 +19156,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1695259201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19530,7 +19509,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1736649977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19736,7 +19716,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1758048752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19942,7 +19923,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1794806501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20148,7 +20130,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1799181647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20354,7 +20337,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1808024015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20560,7 +20544,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1812495496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20766,7 +20751,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1828617802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21118,7 +21104,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1888131336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21324,7 +21311,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1895306268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21530,7 +21518,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1904915444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21736,7 +21725,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1911535352
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21942,7 +21932,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1924519967
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22148,7 +22139,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1927423005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22395,7 +22387,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1973423320
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22601,7 +22594,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1981186249
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22807,7 +22801,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &1984663497
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23159,7 +23154,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &2037656267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23518,7 +23514,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &2058145560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23724,7 +23721,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &2070872887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23930,7 +23928,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &2092443014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24136,7 +24135,8 @@ MonoBehaviour:
   - {fileID: 452650867}
   score_text: {fileID: 1235876715}
   score: 0
-  reward: 0
+  total_score: 0
+  count: 0
 --- !u!61 &2118927632
 BoxCollider2D:
   m_ObjectHideFlags: 0
