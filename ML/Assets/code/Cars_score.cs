@@ -20,8 +20,8 @@ public class Cars_score : MonoBehaviour
                 step[count] = (int)car.GetComponent<Checkpoint>().score;
                 step[count + 100] = (int)car.GetComponent<movement>().car.velocity.x;
                 step[count + 200] = (int)car.GetComponent<movement>().car.velocity.y;
-                step[count + 300] = (int)car.GetComponent<movement>().car.position.x;
-                step[count + 400] = (int)car.GetComponent<movement>().car.position.y;
+                step[count + 300] = (int)car.GetComponent<Checkpoint>().pos_diff.x;
+                step[count + 400] = (int)car.GetComponent<Checkpoint>().pos_diff.y;
                 step[count + 500] = (int)car.GetComponent<Checkpoint>().count;
                 count++;
             }

@@ -1,148 +1,202 @@
-import socket
-import struct
-import random
-import threading
-import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers
 from collections import deque
+import random
+import numpy as np
+import os
+import struct
+import socket
+import threading
+import time
 
-# Create a TCP/IP socket
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-# Bind the socket to a local address and port
-host = '127.0.0.1'  # Localhost
-port = 65432        # Port to listen on
-server_socket.bind((host, port))
-
-# Listen for incoming connections
-server_socket.listen(1)
-print(f'Server listening on {host}:{port}')
-
-# Wait for a connection
-connection, client_address = server_socket.accept()
-print(f'Connected to: {client_address}')
-
-def build_model(state_size, action_size):
-    model = tf.keras.Sequential()
-    model.add(layers.Dense(24, input_dim=state_size, activation='relu'))
-    model.add(layers.Dense(24, activation='relu'))
-    model.add(layers.Dense(action_size, activation='linear'))
-    model.compile(loss='mse', optimizer=tf.keras.optimizers.Adam(learning_rate=0.001))
-    return model
-
-class DQNAgent:
-    def __init__(self, state_size, action_size):
+class NeuralNetworkAgent:
+    def __init__(self, state_size, action_size, model_path=None):
         self.state_size = state_size
         self.action_size = action_size
         self.memory = deque(maxlen=2000)
-        self.gamma = 0.95  # Discount factor
-        self.epsilon = 1.0  # Exploration rate
-        self.epsilon_min = 0.05
-        self.epsilon_decay = 0.995
         self.learning_rate = 0.001
-        self.model = build_model(state_size, action_size)
+        self.model = self._build_model()
 
-    def remember(self, state, action, reward, next_state, done):
-        self.memory.append((state, action, reward, next_state, done))
+        if model_path:
+            self.model.load_weights(model_path)
+
+    def _build_model(self):
+        model = tf.keras.Sequential()
+        model.add(layers.Dense(24, input_dim=self.state_size, activation='relu'))
+        model.add(layers.Dense(24, activation='relu'))
+        model.add(layers.Dense(self.action_size, activation='linear'))  # Output is a continuous action (angle)
+        model.compile(loss='mse', optimizer=tf.keras.optimizers.Adam(learning_rate=self.learning_rate))
+        return model
 
     def act(self, state):
-        if np.random.rand() <= self.epsilon:
-            return random.randrange(self.action_size)
-        act_values = self.model.predict(state)
-        return np.argmax(act_values[0])
+        q_values = self.model.predict(state, verbose=0)
+        return float(q_values[0][0])  # Continuous action space for angle
 
-    def replay(self, batch_size):
+    def remember(self, state, action, reward):
+        self.memory.append((state, action, reward))
+
+    def train(self, batch_size=64):
         if len(self.memory) < batch_size:
             return
         minibatch = random.sample(self.memory, batch_size)
-        for state, action, reward, next_state, done in minibatch:
-            target = reward
-            if not done:
-                target = reward + self.gamma * np.amax(self.model.predict(next_state)[0])
-            target_f = self.model.predict(state)
-            target_f[0][action] = target
+        for state, action, reward in minibatch:
+            target = reward  # You may want to adjust how you calculate target based on your environment
+            target_f = self.model.predict(state, verbose=0)
+            target_f[0][0] = target
             self.model.fit(state, target_f, epochs=1, verbose=0)
-        if self.epsilon > self.epsilon_min:
-            self.epsilon *= self.epsilon_decay
-
-    def load(self, name):
-        self.model.load_weights(name)
 
     def save(self, name):
         self.model.save_weights(name)
 
-def RL(reward, v_x, v_y, x, y, cur_checkpoint, state, agent, done): # Return angle (0,360)
-    next_state = np.array([v_x, v_y, x, y, cur_checkpoint]).reshape(1, -1)  # Reshaping for agent input
-    action = agent.act(state)
-    agent.remember(state, action, reward, next_state, done)
-    return action * 20, next_state  # Action * 10 gives the angle between 0 and 360
+    def load(self, name):
+        self.model.load_weights(name)
 
-def train_agent(agent, batch_size):
-    while True:
-        if len(agent.memory) > batch_size:
-            agent.replay(batch_size)
+    def get_weights(self):
+        return self.model.get_weights()
 
+    def set_weights(self, weights):
+        self.model.set_weights(weights)
 
-agent = DQNAgent(5, 18)
-batch_size = 256
-# Start training in a separate thread
-training_thread = threading.Thread(target=train_agent, args=(agent, batch_size))
-training_thread.daemon = True
-training_thread.start()
+class AgentManager:
+    def __init__(self, num_agents=100, state_size=600, action_size=1, top_k=10):
+        self.num_agents = num_agents
+        self.state_size = state_size
+        self.action_size = action_size
+        self.top_k = top_k  # Number of top agents to retain
+        self.agents = [NeuralNetworkAgent(state_size, action_size) for _ in range(num_agents)]
+        self.best_agent = None
+        self.best_score = -float('inf')
+        self.running = True
+        self.lock = threading.Lock()
 
-# Initialize states for all agents
-states = [np.zeros((1, 5)) for _ in range(100)]
-count = 0;
-
-while count <= 900:
-    data_bytes = connection.recv(700 * 4)
-    score_avg = 0
-    if data_bytes:
-        data = struct.unpack('700i', data_bytes)
-        rewards = data[0:100]
-        v_x = data[100:200]
-        v_y = data[200:300]
-        x = data[300:400]
-        y = data[400:500]
-        cur_checkpoint = data[500:600]
-        done = data[600:700]
+    def evolve(self):
+        # Sort agents based on their scores
+        self.agents.sort(key=lambda agent: getattr(agent, 'score', 0), reverse=True)
+        top_agents = self.agents[:self.top_k]
         
-        if done == 0:
-            states = []
-            for i in range(100):
-                state = np.array([v_x[i], v_y[i], x[i], y[i], cur_checkpoint[i]]).reshape(1,5)
-                states.append(state)
-            count+=1
-            print(count)
-            done = 1
+        # Update the best agent
+        if top_agents[0].score > self.best_score:
+            self.best_score = top_agents[0].score
+            self.best_agent = top_agents[0]
+            self.best_agent.save("best_model.h5")
+            print(f"New best score: {self.best_score}")
 
-        angles = []
-        new_states = []
-        
-        # Process each agent (vehicle)
-        for i in range(100):
-            score_avg += rewards[i]
-            angle, next_state = RL(rewards[i], v_x[i], v_y[i], x[i], y[i], cur_checkpoint[i], states[i], agent, done[i])
-            angles.append(angle)
-            new_states.append(next_state)
+        # Create new generation
+        new_agents = []
+        for i in range(self.num_agents):
+            parent = random.choice(top_agents)
+            child = NeuralNetworkAgent(self.state_size, self.action_size)
+            child.model.set_weights(parent.model.get_weights())
+            
+            # Mutate the child model by adding small noise
+            weights = child.model.get_weights()
+            mutated_weights = [w + np.random.normal(0, 0.01, size=w.shape) for w in weights]
+            child.model.set_weights(mutated_weights)
+            new_agents.append(child)
+        self.agents = new_agents
 
-        # Convert angles list to bytes and send back to the client
-        angles_bytes = struct.pack('100f', *angles)
-        connection.sendall(angles_bytes)
+    def reset(self):
+        for agent in self.agents:
+            agent.memory.clear()
+            agent.score = 0
 
+    def save_best(self):
+        if self.best_agent:
+            self.best_agent.save("best_model.h5")
+            print("Best model saved.")
 
-        # Update states for all agents
-        states = new_states
+    def load_best(self):
+        if os.path.exists("best_model.h5"):
+            self.best_agent = NeuralNetworkAgent(self.state_size, self.action_size)
+            self.best_agent.load("best_model.h5")
+            print("Best model loaded.")
 
-        print(score_avg / 100)
+class UnityServer:
+    def __init__(self, host='127.0.0.1', port=65432, manager=None):
+        self.host = host
+        self.port = port
+        self.manager = manager
+        self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.server_socket.bind((self.host, self.port))
+        self.server_socket.listen(1)
+        print(f"Server listening on {self.host}:{self.port}")
+        self.client_socket, self.addr = self.server_socket.accept()
+        print(f"Connection from {self.addr}")
+        self.thread = threading.Thread(target=self.run)
+        self.thread.start()
 
-    else:
-        break
+    def run(self):
+        while self.manager.running:
+            try:
+                data_bytes = self.client_socket.recv(700 * 4)
+                if not data_bytes:
+                    continue
+                data = struct.unpack('700i', data_bytes)
+                rewards = data[0:100]
+                v_x = data[100:200]
+                v_y = data[200:300]
+                x = data[300:400]
+                y = data[400:500]
+                cur_checkpoint = data[500:600]
+                done = data[600:700]
+                
+                # Prepare state for each agent
+                states = []
+                for i in range(self.manager.num_agents):
+                    state = [
+                        x[i], y[i],
+                        v_x[i], v_y[i],
+                        cur_checkpoint[i],
+                        rewards[i]
+                    ]
+                    states.append(np.array(state).reshape(1, -1))
+                
+                # Get actions from agents
+                angles = []
+                for i, agent in enumerate(self.manager.agents):
+                    angle = agent.act(states[i])
+                    angles.append(angle)
+                
+                # Send actions back to Unity
+                angles_bytes = struct.pack('100f', *angles)
+                self.client_socket.sendall(angles_bytes)
+                
+                # Store rewards and other info for training
+                for i, agent in enumerate(self.manager.agents):
+                    reward = rewards[i]
+                    agent.remember(states[i], angles[i], reward)
 
-# Save the entire model to a file
-agent.model.save('dqn_model.h5')
+                if done == 1:
+                    with self.manager.lock:
+                        print("Replaying and evolving agents...")
+                        for agent in self.manager.agents:
+                            agent.train(batch_size=64)  # Train each agent based on their experience
+                        self.manager.evolve()
 
-# Close the connection
-connection.close()
-server_socket.close()
+            except Exception as e:
+                print(f"Error: {e}")
+                break
+        self.client_socket.close()
+        self.server_socket.close()
+
+def main():
+    num_agents = 100
+    state_size = 6  # Adjust based on your actual state representation
+    action_size = 1  # Assuming single continuous action (angle)
+    top_k = 10
+
+    manager = AgentManager(num_agents=num_agents, state_size=state_size, action_size=action_size, top_k=top_k)
+    manager.load_best()  # Load the best model if available
+    server = UnityServer(host='127.0.0.1', port=65432, manager=manager)
+
+    try:
+        while True:
+            time.sleep(1)  # Keep the main thread alive
+    except KeyboardInterrupt:
+        print("Stopping training...")
+        manager.save_best()
+        manager.running = False
+        server.thread.join()
+
+if __name__ == "__main__":
+    main()
