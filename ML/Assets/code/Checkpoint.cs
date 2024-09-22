@@ -1,9 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -13,6 +9,7 @@ public class Checkpoint : MonoBehaviour
     public float total_score = 0;
     public int count = 0;
     public Vector2 pos_diff;
+    private double last_angle = 0;
     void Start()
     {
         foreach(CheckpointSingle checkpoint in checkpoints)
@@ -39,15 +36,15 @@ public class Checkpoint : MonoBehaviour
         Vector2 checkpoint_pos = checkpoints[count].transform.position;
         Vector2 car_pos = car.position;
         Vector2 car_vel = car.velocity;
-        Vector2 car_angle = new Vector2((float)Math.Sin(car.GetComponent<movement>().angle),(float)Math.Cos(car.GetComponent<movement>().angle));
         pos_diff = checkpoint_pos - car_pos;
+        double angle = car.transform.eulerAngles[2];
 
-        score = Vector2.Dot(car_angle.normalized, pos_diff.normalized) * 100;
+        score = -20;
+        score += Vector2.Dot(car_vel, pos_diff.normalized) * 200;
         total_score += score;
-        total_score -= 1;
-        if(total_score < -100)
+        if(total_score < -500)
         {
-            score = -1000;
+            score -= 100;
         }
 
         /*score_text.text = "Score: " + Mathf.Round(score*100)/100;*/
