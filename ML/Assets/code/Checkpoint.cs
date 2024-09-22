@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
@@ -26,6 +27,7 @@ public class Checkpoint : MonoBehaviour
             score += 200 * count;
             if (count > 11)
             {
+                score += 1000;
                 count = 0;
                 Debug.Log("Done");
             }
@@ -37,14 +39,15 @@ public class Checkpoint : MonoBehaviour
         Vector2 checkpoint_pos = checkpoints[count].transform.position;
         Vector2 car_pos = car.position;
         Vector2 car_vel = car.velocity;
+        Vector2 car_angle = new Vector2((float)Math.Sin(car.GetComponent<movement>().angle),(float)Math.Cos(car.GetComponent<movement>().angle));
         pos_diff = checkpoint_pos - car_pos;
 
-        score = Vector2.Dot(car_vel.normalized, pos_diff.normalized) * 50;
+        score = Vector2.Dot(car_angle.normalized, pos_diff.normalized) * 100;
         total_score += score;
         total_score -= 1;
         if(total_score < -100)
         {
-            score = -10000;
+            score = -1000;
         }
 
         /*score_text.text = "Score: " + Mathf.Round(score*100)/100;*/

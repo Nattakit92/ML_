@@ -23,7 +23,7 @@ public class python : MonoBehaviour
         SendDataToPython(cars_score.step);
         for(int i = 600;i < 700; i++)
         {
-            cars_score.step[i] = 1;
+            cars_score.step[i] = 0;
         }
     }
 
