@@ -187,7 +187,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &17735333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &19668707
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &47927473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -992,7 +992,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &88395293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &113393160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &156477171
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &158890219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1857,7 +1857,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &169674173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2063,7 +2063,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &179333157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &185895457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2475,7 +2475,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &209582710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2681,7 +2681,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &210812918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3101,7 +3101,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &249582886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3453,7 +3453,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &300114836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3659,7 +3659,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &357034351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3865,7 +3865,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &357537604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4056,7 +4056,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &366082943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4423,7 +4423,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &392856289
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4629,7 +4629,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &393933587
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4835,7 +4835,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &404870044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5041,7 +5041,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &414581946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5393,7 +5393,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &466284618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5600,7 +5600,7 @@ Transform:
   m_GameObject: {fileID: 498228314}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.010744529, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5775,7 +5775,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &525589891
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5981,7 +5981,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &533443857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6187,7 +6187,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &563819203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6393,7 +6393,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &571281180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6599,7 +6599,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &583552133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6805,7 +6805,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &584714379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7011,7 +7011,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &587654832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7217,7 +7217,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &594161647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7423,7 +7423,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &594243382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7629,7 +7629,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &597706478
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7835,7 +7835,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &615807773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8041,7 +8041,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &620457616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8247,7 +8247,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &624901517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8453,7 +8453,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &624917252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8659,7 +8659,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &631476077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8865,7 +8865,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &640332101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9031,14 +9031,14 @@ Transform:
   m_GameObject: {fileID: 650646745}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.49, y: -5.59, z: 0}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1459339896}
-  - {fileID: 1382318044}
   - {fileID: 1623979218}
   - {fileID: 1061688974}
+  - {fileID: 1382318044}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &744720381
@@ -9252,7 +9252,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &769245689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9598,7 +9598,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!1 &791015109
 GameObject:
   m_ObjectHideFlags: 0
@@ -9664,7 +9664,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &791015112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9870,7 +9870,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &810539373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10222,7 +10222,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &912006627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10428,7 +10428,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &959022750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10780,7 +10780,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1022397958
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10986,7 +10986,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1031375547
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11192,7 +11192,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1040733790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11398,7 +11398,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1061614955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11662,13 +11662,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061688971}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9750529, y: 19.87003, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 650646746}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1062289044
 GameObject:
   m_ObjectHideFlags: 0
@@ -11734,7 +11734,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1062289047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11940,7 +11940,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1100963589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12146,7 +12146,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1115728580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12337,7 +12337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -12471,7 +12471,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1128968191
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12733,7 +12733,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1173583695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12939,7 +12939,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1177227297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13145,7 +13145,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1195119681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13351,7 +13351,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1209562828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13557,7 +13557,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1220851609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13763,7 +13763,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1226871105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13969,7 +13969,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1231823570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14311,7 +14311,7 @@ Transform:
   m_GameObject: {fileID: 1245527027}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: -1, z: 0}
+  m_LocalPosition: {x: -7, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14340,7 +14340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cars: {fileID: 1245527028}
-  step: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  step: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   rotation:
   - 0
   - 0
@@ -14507,7 +14507,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1253365577
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14713,7 +14713,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1257598952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15059,13 +15059,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382318041}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.639999, y: 5.7000003, z: 0}
-  m_LocalScale: {x: 1.1744795, y: 10.571976, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 21, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 650646746}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1390843963
 GameObject:
   m_ObjectHideFlags: 0
@@ -15131,7 +15131,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1390843966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15337,7 +15337,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1424523671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15543,7 +15543,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1424929437
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15749,7 +15749,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1458321617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16014,8 +16014,8 @@ Transform:
   m_GameObject: {fileID: 1459339893}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.64, y: 5.46, z: 0}
-  m_LocalScale: {x: 1.1744795, y: 10.571976, z: 1}
+  m_LocalPosition: {x: -10, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 650646746}
@@ -16085,7 +16085,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1469435957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16291,7 +16291,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1486130889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16643,7 +16643,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1496031498
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16849,7 +16849,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1521543450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17055,7 +17055,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1539630602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17261,7 +17261,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1553315123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17467,7 +17467,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1560534036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17673,7 +17673,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1561731424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17879,7 +17879,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1565147223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18085,7 +18085,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1574434529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18291,7 +18291,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1585734382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18497,7 +18497,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1603841720
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18744,7 +18744,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1611532486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18950,7 +18950,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1615433804
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19156,7 +19156,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1621036996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19421,8 +19421,8 @@ Transform:
   m_GameObject: {fileID: 1623979215}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.031099975, y: 11.0697, z: 0}
-  m_LocalScale: {x: 0.9750529, y: 19.87003, z: 1}
+  m_LocalPosition: {x: 0, y: 10.5, z: 0}
+  m_LocalScale: {x: 1, y: 21, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 650646746}
@@ -19492,7 +19492,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1656828494
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19698,7 +19698,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1686151590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19904,7 +19904,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1692922955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20110,7 +20110,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1699442757
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20316,7 +20316,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1720124809
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20522,7 +20522,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1722255673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20874,7 +20874,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1730058149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21080,7 +21080,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1746068576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21286,7 +21286,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1758048752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21492,7 +21492,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1763680848
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21698,7 +21698,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1787348888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21904,7 +21904,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1821149625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22110,7 +22110,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1840129325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22503,7 +22503,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1930355350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22709,7 +22709,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &1994346888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22915,7 +22915,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &2007210576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23461,7 +23461,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &2082344469
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23667,7 +23667,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &2084220553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23873,7 +23873,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &2095467956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24079,7 +24079,7 @@ MonoBehaviour:
   score: 0
   total_score: 0
   count: 0
-  pos_diff: {x: 0, y: 0}
+  checkpoint_pos: {x: 0, y: 0}
 --- !u!61 &2131184179
 BoxCollider2D:
   m_ObjectHideFlags: 0

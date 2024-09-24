@@ -8,8 +8,7 @@ public class Checkpoint : MonoBehaviour
     public float score = 0;
     public float total_score = 0;
     public int count = 0;
-    public Vector2 pos_diff;
-    private double last_angle = 0;
+    public Vector2 checkpoint_pos;
     void Start()
     {
         foreach(CheckpointSingle checkpoint in checkpoints)
@@ -21,32 +20,36 @@ public class Checkpoint : MonoBehaviour
     {
         if (count.ToString() == checkpoint.transform.name){
             count++;
-            score += 200 * count;
+            score += 1000 * count;
             if (count > 11)
             {
-                score += 1000;
+                score += 10000;
                 count = 0;
                 Debug.Log("Done");
             }
-            total_score = count * 5;
         }
     }
     void Update()
     {
-        Vector2 checkpoint_pos = checkpoints[count].transform.position;
+        checkpoint_pos = checkpoints[count].transform.position;
         Vector2 car_pos = car.position;
         Vector2 car_vel = car.velocity;
-        pos_diff = checkpoint_pos - car_pos;
-        double angle = car.transform.eulerAngles[2];
+        Vector2 pos_diff = checkpoint_pos - car_pos;
 
-        score = -20;
+        score = -100;
+        score += count * 100;
         score += Vector2.Dot(car_vel, pos_diff.normalized) * 200;
-        total_score += score;
-        if(total_score < -500)
+        if (Math.Pow(car_pos[0], 2) + (4 * Math.Pow(car_pos[1], 2)) > 64)
         {
-            score -= 100;
+            score -= 500;
         }
 
-        /*score_text.text = "Score: " + Mathf.Round(score*100)/100;*/
+        total_score += score;
+        // if(total_score < -500)
+        // {
+        //     score -= 100;
+        // }
+
+        // score_text.text = "Score: " + Mathf.Round(score*100)/100;
     }
 }

@@ -20,10 +20,7 @@ public class python : MonoBehaviour
     void Update()
     {
         SendDataToPython(cars_score.step);
-        for(int i = 600;i < 700; i++)
-        {
-            cars_score.step[i] = 0;
-        }
+        cars_score.step[800] = 0;
     }
 
     void ConnectToPythonServer()
