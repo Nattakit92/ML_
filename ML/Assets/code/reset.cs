@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using Unity.Mathematics;
 using System;
+using System.IO;
 
 
 public class reset : MonoBehaviour
@@ -10,14 +11,26 @@ public class reset : MonoBehaviour
     public TextMeshProUGUI reset_text;
     private float time;
     private int reset_count = 0;
-    private int checkpoint = 0;
+    private int checkpoint;
     private int[] reset_times = new int[13] {10, 15, 20, 30, 35, 50, 60, 70, 80, 90, 100, 120, 140};
     // --------------------------------------0---1---2---3---4---5----6---7---8---9---10---11---12
 
     // Update is called once per frame
+    void Start()
+    {
+        string variablePath = "variable.txt";
+        try
+        {
+            checkpoint = int.Parse(File.ReadAllText(variablePath));
+        }
+        catch (Exception)
+        {
+            checkpoint = 0;
+        }
+        Debug.Log("Next Duration : " + reset_times[checkpoint]);
+    }
     void Update()
     {
-        int i = 600;
         time += Time.deltaTime;
         reset_text.text = "Time : " + time.ToString();
 
@@ -53,11 +66,10 @@ public class reset : MonoBehaviour
                     car.GetComponent<Checkpoint>().score = 0;
                     car.GetComponent<Checkpoint>().total_score = 0;
                     cars.GetComponent<Cars_score>().step[800] = 1;
-                    i++;
                 }
             }
             checkpoint = math.min(checkpoint, 12);
-            Debug.Log("Gen " + reset_count.ToString() + " score : " + (acc_score/(i - 600)).ToString() + ", checkpoint : " + hcheckpoint.ToString() + ", count : " + hcount.ToString() + ", next time : " + reset_times[checkpoint].ToString());
+            Debug.Log("Gen " + reset_count.ToString() + " score : " + (acc_score/100).ToString() + ", checkpoint : " + hcheckpoint.ToString() + ", count : " + hcount.ToString() + ", next duration : " + reset_times[checkpoint].ToString());
             time = 0;
         }
     }

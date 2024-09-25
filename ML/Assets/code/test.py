@@ -109,6 +109,7 @@ class Manager:
         self.gen += 1
 
     def load_top(self):
+        have = False
         for i in range(self.top_k):
             filename = f"top_model_{i + 1}.weights.h5"
             if os.path.exists(filename):
@@ -116,10 +117,12 @@ class Manager:
                 agent.load(filename)
                 self.agents[i] = agent  # Replace the current agent with the loaded top agent
                 print(f"Top {i + 1} model loaded from {filename}")
-        for i in range(self.top_k, self.num_agents):
-            weights = self.agents[random.randint(0,self.top_k)].model.get_weights()
-            mutated_weights = [w + np.random.normal(0, gen_change, size=w.shape) for w in weights]
-            self.agents[i].model.set_weights(mutated_weights)
+                have = True
+        if have:
+            for i in range(self.top_k, self.num_agents):
+                weights = self.agents[random.randint(0,self.top_k)].model.get_weights()
+                mutated_weights = [w + np.random.normal(0, gen_change, size=w.shape) for w in weights]
+                self.agents[i].model.set_weights(mutated_weights)
                 
 
     def reset(self):
@@ -224,7 +227,7 @@ def main():
         server.pool.join()
 
 if __name__ == "__main__":
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
     gpus = tf.config.list_physical_devices('GPU')
     if gpus:
         try:
