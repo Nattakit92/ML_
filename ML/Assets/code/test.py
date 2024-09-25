@@ -15,7 +15,8 @@ global hcheckpoint
 variable_path = 'variable.txt'
 try:
     file1 = open(variable_path,"a")
-    hcheckpoint = file1.readline()
+    hcheckpoint = file1.read()
+    file1.close()
 except:
     hcheckpoint = 0 #From the last one
 gen_change = gen_changes[hcheckpoint]
@@ -83,8 +84,9 @@ class Manager:
                 hcheckpoint = agent.checkpoint
                 filename = f"Archive_model/checkpoint_{hcheckpoint}.weights.h5"
                 agent.save(filename)
-                file = open(variable_path, "w")
-                file.writelines(hcheckpoint)
+                file1 = open(variable_path, "w")
+                file1.write(hcheckpoint)
+                file1.close()
         
 
         # Save the top k models
