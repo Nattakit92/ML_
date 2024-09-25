@@ -13,12 +13,13 @@ from multiprocessing.dummy import Pool #Remove .dummy and at Pool() -> Pool(Proc
 gen_changes = [1, 0.5, 0.3, 0.3, 0.3, 0.2, 0.1, 0.05, 0.03, 0.01, 0.003, 0.001, 0.001]
 global hcheckpoint 
 variable_path = 'variable.txt'
+hcheckpoint = 1
 try:
-    file1 = open(variable_path,"a")
-    hcheckpoint = int(file1.read())
+    file1 = open(variable_path,"r+")
+    file1.read(hcheckpoint)
     file1.close()
 except:
-    hcheckpoint = 0 #From the last one
+    pass
 gen_change = gen_changes[hcheckpoint]
 print(f"hcheckpoint : {hcheckpoint}")
 
@@ -223,7 +224,7 @@ def main():
         server.pool.join()
 
 if __name__ == "__main__":
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '0'
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
     gpus = tf.config.list_physical_devices('GPU')
     if gpus:
         try:
