@@ -15,7 +15,7 @@ global hcheckpoint
 variable_path = 'variable.txt'
 try:
     file1 = open(variable_path,"a")
-    hcheckpoint = file1.read()
+    hcheckpoint = int(file1.read())
     file1.close()
 except:
     hcheckpoint = 0 #From the last one
@@ -85,7 +85,7 @@ class Manager:
                 filename = f"Archive_model/checkpoint_{hcheckpoint}.weights.h5"
                 agent.save(filename)
                 file1 = open(variable_path, "w")
-                file1.write(hcheckpoint)
+                file1.write(str(hcheckpoint))
                 file1.close()
         
 
