@@ -9,11 +9,17 @@ import threading
 import time
 from multiprocessing.dummy import Pool #Remove .dummy and at Pool() -> Pool(Process = 4)
 
-# -------------0---1----2----3----4-----5-----6----7------8-----9------10-----11-----12--
-gen_changes = [1, 0.5, 0.3, 0.3, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.003, 0.001, 0.001]
+# -------------0---1----2----3----4-----5-----6----7----8-----9------10-----11-----12--
+gen_changes = [1, 0.5, 0.3, 0.3, 0.3, 0.2, 0.1, 0.05, 0.03, 0.01, 0.003, 0.001, 0.001]
 global hcheckpoint 
-hcheckpoint = 7 #From the last one
+variable_path = 'variable.txt'
+try:
+    file1 = open(variable_path,"a")
+    hcheckpoint = file1.readline()
+except:
+    hcheckpoint = 0 #From the last one
 gen_change = gen_changes[hcheckpoint]
+print(f"hcheckpoint : {hcheckpoint}")
 
 class Agent:
     def __init__(self, state_size, action_size, model_path=None):
@@ -31,12 +37,13 @@ class Agent:
         model.add(layers.Input(shape=(self.state_size,)))
         model.add(layers.Dense(64, activation='relu'))
         model.add(layers.Dense(64, activation='relu'))
+        model.add(layers.Dense(64, activation='relu'))
         model.add(layers.Dense(self.action_size, activation='linear'))
-        model.compile(optimizer='adam', loss='mse')
         return model
     
+    @tf.function(reduce_retracing=True)
     def act(self, state):
-        out_values = self.model.predict(np.array(state).reshape(1, -1), verbose = None)
+        out_values = self.model(np.array(state).reshape(1, -1), training=False)
         return float(out_values[0][0]) % 360
     
     def save(self, name):
@@ -76,6 +83,8 @@ class Manager:
                 hcheckpoint = agent.checkpoint
                 filename = f"Archive_model/checkpoint_{hcheckpoint}.weights.h5"
                 agent.save(filename)
+                file = open(variable_path, "w")
+                file.writelines(hcheckpoint)
         
 
         # Save the top k models
@@ -212,6 +221,7 @@ def main():
         server.pool.join()
 
 if __name__ == "__main__":
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '0'
     gpus = tf.config.list_physical_devices('GPU')
     if gpus:
         try:

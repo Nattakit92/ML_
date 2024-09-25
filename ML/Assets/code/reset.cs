@@ -10,7 +10,7 @@ public class reset : MonoBehaviour
     public TextMeshProUGUI reset_text;
     private float time;
     private int reset_count = 0;
-    private int checkpoint = 7;
+    private int checkpoint = 0;
     private int[] reset_times = new int[13] {10, 15, 20, 30, 35, 50, 60, 70, 80, 90, 100, 120, 140};
     // --------------------------------------0---1---2---3---4---5----6---7---8---9---10---11---12
 
@@ -33,9 +33,9 @@ public class reset : MonoBehaviour
             {
                 foreach (Transform car in cars_10)
                 {
-                    if (checkpoint > hcheckpoint){
+                    if (car.GetComponent<Checkpoint>().count > hcheckpoint){
                         hcount = 1;
-                        hcheckpoint = checkpoint;
+                        hcheckpoint = car.GetComponent<Checkpoint>().count;
                     } else if (checkpoint == hcheckpoint){
                         hcount++;
                     }
