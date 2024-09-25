@@ -18,7 +18,7 @@ public class reset : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        string variablePath = "variable.txt";
+        string variablePath =  "Assets/code/variable.txt";
         try
         {
             checkpoint = int.Parse(File.ReadAllText(variablePath));

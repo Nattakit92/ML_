@@ -9,17 +9,18 @@ import threading
 import time
 from multiprocessing.dummy import Pool #Remove .dummy and at Pool() -> Pool(Process = 4)
 
-# -------------0---1----2----3----4-----5-----6----7----8-----9------10-----11-----12--
+# -------------0---1----2----3----4-----5-----6----7----8-----9-----10-----11-----12--
 gen_changes = [1, 0.5, 0.3, 0.3, 0.3, 0.2, 0.1, 0.05, 0.03, 0.01, 0.003, 0.001, 0.001]
 global hcheckpoint 
 variable_path = 'variable.txt'
-hcheckpoint = 1
-try:
+if os.path.exists(variable_path):
     file1 = open(variable_path,"r+")
-    file1.read(hcheckpoint)
-    file1.close()
-except:
-    pass
+    hcheckpoint = int(file1.read())
+else:
+    hcheckpoint = 0
+    file1 = open(variable_path,"w")
+    file1.write(str(hcheckpoint))
+file1.close()
 gen_change = gen_changes[hcheckpoint]
 print(f"hcheckpoint : {hcheckpoint}")
 
@@ -46,6 +47,7 @@ class Agent:
     @tf.function(reduce_retracing=True)
     def act(self, state):
         out_values = self.model(np.array(state).reshape(1, -1), training=False)
+        # out_values = self.model.predict(np.array(state).reshape(1, -1), verbose=False)
         return float(out_values[0][0]) % 360
     
     def save(self, name):
@@ -85,9 +87,6 @@ class Manager:
                 hcheckpoint = agent.checkpoint
                 filename = f"Archive_model/checkpoint_{hcheckpoint}.weights.h5"
                 agent.save(filename)
-                file1 = open(variable_path, "w")
-                file1.write(str(hcheckpoint))
-                file1.close()
         
 
         # Save the top k models
@@ -221,19 +220,27 @@ def main():
             time.sleep(1)  # Keep the main thread alive
     except KeyboardInterrupt:
         print("Stopping training...")
+        file1 = open(variable_path,"w")
+        file1.write(str(hcheckpoint))
+        file1.close()
         manager.running = False
         server.thread.join()
         server.pool.close()
         server.pool.join()
 
 if __name__ == "__main__":
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
     gpus = tf.config.list_physical_devices('GPU')
     if gpus:
         try:
             for gpu in gpus:
                 tf.config.experimental.set_memory_growth(gpu, True)
             print("Memory growth enabled for GPUs")
+
+            # tf.config.set_logical_device_configuration(
+            #     gpus[0],
+            #     [tf.config.LogicalDeviceConfiguration(memory_limit=4096)])  # Set limit to 4096 MB (4GB)
+            # print("Memory limit set to 4GB")
         except RuntimeError as e:
             print(f"Error enabling memory growth: {e}")
     else:
