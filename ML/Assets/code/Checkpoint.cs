@@ -39,10 +39,10 @@ public class Checkpoint : MonoBehaviour
         score = -100;
         score += count * 100;
         score += Vector2.Dot(car_vel, pos_diff.normalized) * 200;
-        if ((Math.Pow(car_pos[0], 2) + (4 * Math.Pow(car_pos[1], 2))) > 64)
-        {
-            score -= 200;
-        }
+        // if ((Math.Pow(car_pos[0], 2) + (4 * Math.Pow(car_pos[1], 2))) > 64)
+        // {
+        //     score -= 200;
+        // }
 
         total_score += score;
         // if(total_score < -500)

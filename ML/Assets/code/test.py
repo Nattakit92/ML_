@@ -8,6 +8,7 @@ import socket
 import threading
 import time
 from multiprocessing.dummy import Pool #Remove .dummy and at Pool() -> Pool(Process = 4)
+import gc
 
 # -------------0---1----2----3----4-----5-----6----7----8-----9-----10-----11-----12--
 gen_changes = [1, 0.5, 0.3, 0.3, 0.3, 0.2, 0.1, 0.05, 0.03, 0.01, 0.003, 0.001, 0.001]
@@ -40,7 +41,6 @@ class Agent:
         model.add(layers.Input(shape=(self.state_size,)))
         model.add(layers.Dense(64, activation='relu'))
         model.add(layers.Dense(64, activation='relu'))
-        model.add(layers.Dense(64, activation='relu'))
         model.add(layers.Dense(self.action_size, activation='linear'))
         return model
     
@@ -55,12 +55,6 @@ class Agent:
     
     def load(self, name):
         self.model.load_weights(name)
-    
-    def get_weights(self):
-        return self.model.get_weights()
-    
-    def set_weights(self, weights):
-        self.model.set_weights(weights)
 
 class Manager:
     def __init__(self, num_agents, state_size, action_size, top_k):
@@ -100,28 +94,58 @@ class Manager:
         gen_change = gen_changes[min(hcheckpoint, 12)]
         print("Evolving agents...")
         print(f'Mutate factor = {gen_change}')
-        for i in range(self.top_k, self.num_agents):
-            weights = top_agents[random.randint(0,self.top_k - 1)].model.get_weights()
+        del self.agents
+        gc.collect()
+        self.agents = []
+
+        for parent in top_agents:
+            child = Agent(self.state_size, self.action_size)
+            child.model.set_weights(parent.model.get_weights())
+            self.agents.append(child)
+
+        for i in range(self.num_agents - self.top_k):
+            parent = random.choice(top_agents)
+            child = Agent(self.state_size, self.action_size)
+            child.model.set_weights(parent.model.get_weights())
+            # Mutate the child model by adding small noise
+            weights = child.model.get_weights()
             mutated_weights = [w + np.random.normal(0, gen_change, size=w.shape) for w in weights]
-            self.agents[i].model.set_weights(mutated_weights)
+            child.model.set_weights(mutated_weights)
+            self.agents.append(child)
+
+
+        del top_agents
+        gc.collect()
 
         self.gen += 1
 
     def load_top(self):
-        have = False
+        have = 0
+        top_agents = []
         for i in range(self.top_k):
             filename = f"top_model_{i + 1}.weights.h5"
             if os.path.exists(filename):
                 agent = Agent(self.state_size, self.action_size)
                 agent.load(filename)
-                self.agents[i] = agent  # Replace the current agent with the loaded top agent
+                top_agents.append(agent)  # Replace the current agent with the loaded top agent
                 print(f"Top {i + 1} model loaded from {filename}")
-                have = True
-        if have:
-            for i in range(self.top_k, self.num_agents):
-                weights = self.agents[random.randint(0,self.top_k)].model.get_weights()
-                mutated_weights = [w + np.random.normal(0, gen_change, size=w.shape) for w in weights]
-                self.agents[i].model.set_weights(mutated_weights)
+                have += 1
+
+        for parent in top_agents:
+            child = Agent(self.state_size, self.action_size)
+            child.model.set_weights(parent.model.get_weights())
+            self.agents.append(child)
+
+        for i in range(self.num_agents - self.top_k):
+            parent = random.choice(top_agents)
+            child = Agent(self.state_size, self.action_size)
+            child.model.set_weights(parent.model.get_weights())
+            # Mutate the child model by adding small noise
+            weights = child.model.get_weights()
+            mutated_weights = [w + np.random.normal(0, gen_change, size=w.shape) for w in weights]
+            child.model.set_weights(mutated_weights)
+            self.agents.append(child)
+
                 
 
     def reset(self):
@@ -180,7 +204,7 @@ class UnityServer:
 
                 t1 = time.time()
                 angles = self.pool.starmap(predict_single_agent, zip(self.manager.agents, states))
-                # print(f'Finish with : {time.time() - t1}')
+                print(f'Finish with : {time.time() - t1}')
 
                 for i, reward in enumerate(rewards):
                     self.manager.agents[i].totalscore += reward
@@ -217,7 +241,7 @@ def main():
 
     try:
         while True:
-            time.sleep(1)  # Keep the main thread alive
+            time.sleep(150)  # Keep the main thread alive
     except KeyboardInterrupt:
         print("Stopping training...")
         file1 = open(variable_path,"w")

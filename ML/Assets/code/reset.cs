@@ -49,7 +49,7 @@ public class reset : MonoBehaviour
                     if (car.GetComponent<Checkpoint>().count > hcheckpoint){
                         hcount = 1;
                         hcheckpoint = car.GetComponent<Checkpoint>().count;
-                    } else if (checkpoint == hcheckpoint){
+                    } else if (car.GetComponent<Checkpoint>().count == hcheckpoint){
                         hcount++;
                     }
                     if (car.GetComponent<Checkpoint>().total_score > hscore)
