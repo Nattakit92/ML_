@@ -1,5 +1,6 @@
 import tensorflow as tf # type: ignore
 from tensorflow.keras import layers # type: ignore
+import tensorflow.keras.backend as K # type: ignore
 import random
 import numpy as np # type: ignore
 import os
@@ -11,7 +12,7 @@ from multiprocessing.dummy import Pool #Remove .dummy and at Pool() -> Pool(Proc
 import gc
 
 # -------------0---1----2----3----4-----5-----6----7----8-----9-----10-----11-----12--
-gen_changes = [1, 0.5, 0.3, 0.3, 0.3, 0.2, 0.1, 0.05, 0.03, 0.01, 0.003, 0.001, 0.001]
+gen_changes = [1, 0.5, 0.3, 0.3, 0.3, 0.2, 0.1, 0.05, 0.03, 0.03, 0.02, 0.01, 0.001]
 global hcheckpoint 
 variable_path = 'variable.txt'
 if os.path.exists(variable_path):
@@ -44,17 +45,18 @@ class Agent:
         model.add(layers.Dense(self.action_size, activation='linear'))
         return model
     
-    @tf.function(reduce_retracing=True)
-    def act(self, state):
-        out_values = self.model(np.array(state).reshape(1, -1), training=False)
-        # out_values = self.model.predict(np.array(state).reshape(1, -1), verbose=False)
-        return float(out_values[0][0]) % 360
-    
     def save(self, name):
         self.model.save_weights(name)
     
     def load(self, name):
         self.model.load_weights(name)
+
+# @tf.function(reduce_retracing=True, experimental_relax_shapes=True)
+def act(agent, state):
+    # out_values = agent.model(np.array(state).reshape(1, -1), training=False)
+    out_values = agent.model.predict(np.array(state).reshape(1, -1), verbose=False)
+    return float(out_values[0][0]) % 360
+
 
 class Manager:
     def __init__(self, num_agents, state_size, action_size, top_k):
@@ -122,6 +124,9 @@ class Manager:
     def load_top(self):
         have = 0
         top_agents = []
+        del self.agents
+        gc.collect()
+        self.agents = []
         for i in range(self.top_k):
             filename = f"top_model_{i + 1}.weights.h5"
             if os.path.exists(filename):
@@ -136,7 +141,7 @@ class Manager:
             child.model.set_weights(parent.model.get_weights())
             self.agents.append(child)
 
-        for i in range(self.num_agents - self.top_k):
+        for i in range(self.num_agents - len(top_agents)):
             parent = random.choice(top_agents)
             child = Agent(self.state_size, self.action_size)
             child.model.set_weights(parent.model.get_weights())
@@ -152,10 +157,6 @@ class Manager:
         for agent in self.agents:
             agent.totalscore = 0
             agent.checkpoint = 0
-
-
-def predict_single_agent(agent, state):
-    return agent.act(state)
 
 
 class UnityServer:
@@ -174,6 +175,7 @@ class UnityServer:
         self.thread.start()
 
     def run(self):
+        count = 0
         while self.manager.running:
             try:
                 data_bytes = self.client_socket.recv(801 * 4)
@@ -203,8 +205,8 @@ class UnityServer:
                 
 
                 t1 = time.time()
-                angles = self.pool.starmap(predict_single_agent, zip(self.manager.agents, states))
-                print(f'Finish with : {time.time() - t1}')
+                angles = self.pool.starmap(act, zip(self.manager.agents, states))
+                # print(f'Finish with : {time.time() - t1}')
 
                 for i, reward in enumerate(rewards):
                     self.manager.agents[i].totalscore += reward
@@ -215,7 +217,13 @@ class UnityServer:
                 # Send actions back to Unity
                 angles_bytes = struct.pack('100f', *angles)
                 self.client_socket.sendall(angles_bytes)
-                
+
+                # print(count)
+                # if count % 10 == 9:
+                # K.clear_session()
+                # gc.collect()
+                count += 1
+
                 # Handle resets
                 if is_reset:
                     with self.manager.lock:

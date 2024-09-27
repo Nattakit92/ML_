@@ -12,7 +12,7 @@ public class reset : MonoBehaviour
     private float time;
     private int reset_count = 0;
     private int checkpoint;
-    private int[] reset_times = new int[13] {10, 15, 20, 30, 35, 50, 60, 70, 80, 90, 100, 120, 140};
+    private int[] reset_times = new int[13] {10, 15, 20, 30, 35, 50, 60, 70, 70, 70, 80, 90, 100};
     // --------------------------------------0---1---2---3---4---5----6---7---8---9---10---11---12
 
     // Update is called once per frame

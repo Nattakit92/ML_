@@ -20,10 +20,10 @@ public class Checkpoint : MonoBehaviour
     {
         if (count.ToString() == checkpoint.transform.name){
             count++;
-            score += 1000 * count;
+            score += 2000 * count;
             if (count > 11)
             {
-                score += 10000;
+                score += 20000;
                 count = 0;
                 Debug.Log("Done");
             }
@@ -37,12 +37,12 @@ public class Checkpoint : MonoBehaviour
         Vector2 pos_diff = checkpoint_pos - car_pos;
 
         score = -100;
-        score += count * 100;
+        score += count * 200;
         score += Vector2.Dot(car_vel, pos_diff.normalized) * 200;
-        // if ((Math.Pow(car_pos[0], 2) + (4 * Math.Pow(car_pos[1], 2))) > 64)
-        // {
-        //     score -= 200;
-        // }
+        if ((Math.Pow(car_pos[0], 2) + (4 * Math.Pow(car_pos[1], 2))) > 64)
+        {
+            score -= 90;
+        }
 
         total_score += score;
         // if(total_score < -500)
